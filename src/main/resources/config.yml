@@ -1,0 +1,26 @@
+# Message sent to player in chat. Use %player% to add the player name.
+welcome_message: "&d&lWelcome %player% to AlphaK server!"
+
+# Title message Main
+title_main_welcome_message: "&d Welcome to AlphaK server!"
+
+# Title Message Subtitle
+title_sub_welcome_message: "&5 Enjoy your Stay %player%."
+
+#Title fade-in -> in ticks
+fade-in: 20
+
+#Title stay -> in ticks
+stay: 80
+
+#Title fade-out -> in ticks
+fade-out: 20
+
+#fireworks enabled?
+fireworks: true
+
+#fireworks amount
+fireworks_amount: 3
+
+#fireworks delay -> in ticks
+fireworks_delay: 50

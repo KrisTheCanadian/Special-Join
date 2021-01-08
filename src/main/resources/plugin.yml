@@ -1,0 +1,7 @@
+name: SpecialJoin
+main: tech.alphak.SpecialJoin.SpecialJoin
+version: 1.0
+author: KrisTheCanadian
+
+commands:
+  specialjoin:
