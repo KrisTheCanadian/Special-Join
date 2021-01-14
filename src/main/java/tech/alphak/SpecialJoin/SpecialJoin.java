@@ -96,18 +96,25 @@ public class SpecialJoin extends JavaPlugin implements Listener {
             _welcomeMessage = _config.getString("welcome_message");
             assert _welcomeMessage != null;
 
-            _welcomeMessage = _welcomeMessage.replace("%player%", player.getDisplayName());
-            _titleSub = _titleSub.replace("%player%", player.getDisplayName());
-            _titleMain = _titleMain.replace("%player%", player.getDisplayName());
+            String welcomeMessage = _welcomeMessage.replace("%player%", player.getDisplayName());
+            String titleSub = _titleSub.replace("%player%", player.getDisplayName());
+            String titleMain = _titleMain.replace("%player%", player.getDisplayName());
 
-            player.sendMessage(translate(_welcomeMessage));
-            player.sendTitle(translate(_titleMain), translate(_titleSub), _fadeIn, _stay, _fadeOut);
+            player.sendMessage(translate(welcomeMessage));
+            player.sendTitle(translate(titleMain), translate(titleSub), _fadeIn, _stay, _fadeOut);
 
             boolean isFireworks = _config.isBoolean("fireworks");
             if( isFireworks && player.hasPermission("special.fireworks")){
                 spawnFireworks(player.getLocation(), _numFireworks);
             }
+            if(player.hasPermission("special.lightning")){
+                spawnLighting(player.getLocation(), _numFireworks);
+            }
         }, _numDelay);
+    }
+
+    public void spawnLighting(Location location, int amount){
+
     }
 
     public void spawnFireworks(Location location, int amount){
